@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bio Link</title>
+    <style>
+        /* Basic Reset and Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            background-color: black; /* Fallback background color */
+        }
+
+        /* Video Background Styling */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Glowing Title Styling */
+        .title {
+            position: absolute;
+            top: 20px; /* Adjust the position of the title */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: white;
+            text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+            z-index: 10;
+        }
+
+        /* Cursor Styling */
+        body {
+            cursor: url('https://cdn.discordapp.com/attachments/1312332222912742405/1254314285747585024/cursor-1.png'), auto;
+        }
+
+        /* Welcome Screen */
+        .welcome-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Solid black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .welcome-screen h1 {
+            color: white;
+            font-size: 18px; /* Smaller font size */
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Profile Picture Styling */
+        .profile-pics {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+            width: 80%;
+        }
+
+        .profile-pic-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        /* Profile Name Styling */
+        .profile-name {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* Social Media Links under each Profile Picture */
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        /* Custom Discord Logo (No Glow) */
+        .discord-logo {
+            width: 30px;
+            height: 30px;
+            background-image: url('https://f.uguu.se/SZkacKVP.png'); /* Simple white Discord logo */
+            background-size: cover;
+        }
+
+        /* Images at the Bottom */
+        .images-container {
+            position: absolute;
+            bottom: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .images-container a {
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .images-container a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Audio Player Styling */
+        .audio-player {
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        iframe {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Video Background -->
+    <video class="video-background" autoplay loop muted>
+        <source src="https://files.catbox.moe/i6nq21.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Title at the Top -->
+    <div class="title">The UnderCover Team</div>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome-screen">
+        <h1>Click Me</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="profile-pics">
+        <div class="profile-pic-container">
+            <img src="https://f.uguu.se/NFMVMcPw.png" alt="d" class="avatar">
+            <div class="profile-name">D</div>
+            <div class="social-links">
+                <a href="https://discord.com/users/1339764435107184700" target="_blank">
+                    <div class="discord-logo"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://d.uguu.se/oLQWcnCh.png" alt="profile" class="avatar">
+            <div class="profile-name">K</div>
+            <div class="social-links">
+                <a href="https://discord.com/users/404386171649523723" target="_blank">
+                    <div class="discord-logo"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://d.uguu.se/MEzrykzm.png" alt="profile" class="avatar">
+            <div class="profile-name">rain</div>
+            <div class="social-links">
+                <a href="https://discord.com/users/1338278718669590639" target="_blank">
+                    <div class="discord-logo"></div> <!-- Added the Discord logo for rain -->
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://d.uguu.se/waFqklhZ.png" alt="profile" class="avatar">
+            <div class="profile-name">U</div>
+            <div class="social-links">
+                <a href="https://discord.com/users/1261261826138832920" target="_blank">
+                    <div class="discord-logo"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- New Profile -->
+        <div class="profile-pic-container">
+            <img src="https://d.uguu.se/ysmylYOr.png" alt="new profile" class="avatar">
+            <div class="profile-name">Cloakzy</div>
+            <div class="social-links">
+                <a href="https://discord.com/users/1286648785493037188" target="_blank">
+                    <div class="discord-logo"></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Images at the Bottom -->
+    <div class="images-container">
+        <a href="https://guns.lol/internetwaring" target="_blank" style="background-image: url('https://cdn.discordapp.com/attachments/1255692212717752513/1332795200732397689/AAAAAAA.gif?ex=67a7b141&is=67a65fc1&hm=e978e484824f6ea720804e2595ce790d0bedf4d99281bda4523edd0019e0c384&');"></a>
+        <a href="https://phans.bio/NeverSlippin" target="_blank" style="background-image: url('https://cdn.discordapp.com/attachments/1255692212717752513/1332795200732397689/AAAAAAA.gif?ex=67a7b141&is=67a65fc1&hm=e978e484824f6ea720804e2595ce790d0bedf4d99281bda4523edd0019e0c384&');"></a>
+    </div>
+
+    <div class="audio-player">
+        <audio id="audio-player" loop autoplay>
+            <source src="https://d.uguu.se/VhyydfoA.mp3" id="audio-source" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+<script>
+    // Add event listener to hide the welcome screen and start media playback
+    document.getElementById("welcome-screen").addEventListener("click", function () {
+        document.getElementById("welcome-screen").style.display = "none";
+        document.getElementById("audio-player").play();
+    });
+</script>
+
+</body>
+</html>
