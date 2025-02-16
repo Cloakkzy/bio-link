@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bio Link</title>
+    <style>
+        /* Basic Reset and Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            background-image: url('https://cdn.discordapp.com/attachments/1327712751467888864/1337515531137454121/cbe3a8e848bf6bbfa4c6b8122fe42d18.png?ex=67a7b9e8&is=67a66868&hm=8cc6e0f6cb5c71ab3d77b756e7313ed7180537acac2cff62ae0054f40852f8f6&'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Cursor Styling */
+        body {
+            cursor: url('https://cdn.discordapp.com/attachments/1312332222912742405/1254314285747585024/cursor-1.png'), auto;
+        }
+
+        /* Welcome Screen */
+        .welcome-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Solid black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .welcome-screen h1 {
+            color: white;
+            font-size: 18px; /* Smaller font size */
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 0 0 10px white; /* Add a glowing effect to the text */
+        }
+
+        /* Profile Picture Styling */
+        .profile-pics {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+            width: 80%;
+        }
+
+        .profile-pic-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        /* Social Media Links under each Profile Picture */
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        /* Customizable Instagram and Twitter Logo Size */
+        .social-links img {
+            width: var(--social-icon-size, 30px);
+            height: var(--social-icon-size, 30px);
+            object-fit: cover;
+        }
+
+        /* Audio Player Styling */
+        .audio-player {
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        iframe {
+            outline: none;
+        }
+
+        /* Profile Name Styling */
+        .profile-name {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 10px;
+            text-shadow: 0 0 10px white; /* Add a glowing effect to the text */
+        }
+
+        /* Images at the Bottom */
+        .images-container {
+            position: absolute;
+            bottom: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .images-container a {
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .images-container a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome-screen">
+        <h1>Click Me</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="profile-pics">
+        <div class="profile-pic-container">
+            <img src="https://cdn.discordapp.com/attachments/1334633956766646292/1337483558834536529/5400259b0d02c3849517a14fcc481523.jpg?ex=67a79c21&is=67a64aa1&hm=0ed7a626232b12be7e628103742e3cf7947318b80e0ef7883a9f900ad79e7413&" 
+                alt="cloakzy" 
+                class="avatar">
+            <div class="social-links">
+                <a href="https://discord.com/users/1286648785493037188" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387733018808322/Logo3.png?ex=67a73c7d&is=67a5eafd&hm=bdda20f81290bf58572ff779ea04beb75538c7dc7299ef7f4932190a8defed10&" 
+                        alt="Instagram">
+                </a>
+                <a href="https://t.me/internetwaring" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387732259770391/Logo9.png?ex=67a73c7d&is=67a5eafd&hm=6f54077e23ae0747211ed04ebf47f240615a7efaedb8706dab6a004bf7053dd8&" 
+                        alt="Twitter">
+                </a>
+            </div>
+            <p class="profile-name">Cloakzy</p>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://cdn.discordapp.com/avatars/1281301658768248846/3cc5a1543ddf6639a6f418a5bb31e3aa.png?size=1024" 
+                alt="tcprape" 
+                class="avatar">
+            <div class="social-links">
+                <a href="https://discord.com/users/1281301658768248846" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387733018808322/Logo3.png?ex=67a73c7d&is=67a5eafd&hm=bdda20f81290bf58572ff779ea04beb75538c7dc7299ef7f4932190a8defed10&" 
+                        alt="Instagram">
+                </a>
+                <a href="https://t.me/tcphulk" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387732259770391/Logo9.png?ex=67a73c7d&is=67a5eafd&hm=6f54077e23ae0747211ed04ebf47f240615a7efaedb8706dab6a004bf7053dd8&" 
+                        alt="Twitter">
+                </a>
+            </div>
+            <p class="profile-name">TcpRape</p>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://cdn.discordapp.com/attachments/1335726817608470611/1337522439336497172/ec8bd42628318a400533616c84ec61c3.jpg?ex=67a7c057&is=67a66ed7&hm=955987ebb4935a3cc593c987650c79c91dfa24b83184a5d635b9b5da67038a8b&" 
+                alt="kelmu" 
+                class="avatar">
+            <div class="social-links">
+                <a href="https://discord.com/users/896478802224480256" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387733018808322/Logo3.png?ex=67a73c7d&is=67a5eafd&hm=bdda20f81290bf58572ff779ea04beb75538c7dc7299ef7f4932190a8defed10&" 
+                        alt="Instagram">
+                </a>
+                <a href="https://t.me/heloworld" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387732259770391/Logo9.png?ex=67a73c7d&is=67a5eafd&hm=6f54077e23ae0747211ed04ebf47f240615a7efaedb8706dab6a004bf7053dd8&" 
+                        alt="Twitter">
+                </a>
+            </div>
+            <p class="profile-name">Kelmu</p>
+        </div>
+
+        <div class="profile-pic-container">
+            <img src="https://cdn.discordapp.com/avatars/1332102247852540096/853cd5ae78d904a96b85eb0d8ed0e5ea.png?size=1024" 
+                alt="6ix" 
+                class="avatar">
+            <div class="social-links">
+                <a href="https://discord.com/users/1332102247852540096" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387733018808322/Logo3.png?ex=67a73c7d&is=67a5eafd&hm=bdda20f81290bf58572ff779ea04beb75538c7dc7299ef7f4932190a8defed10&" 
+                        alt="Instagram">
+                </a>
+                <a href="https://t.me/sixgzzondc" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1255692212717752513/1335387732259770391/Logo9.png?ex=67a73c7d&is=67a5eafd&hm=6f54077e23ae0747211ed04ebf47f240615a7efaedb8706dab6a004bf7053dd8&" 
+                        alt="Twitter">
+                </a>
+            </div>
+            <p class="profile-name">6ix</p>
+        </div>
+    </div>
+
+    <!-- Images at the Bottom -->
+    <div class="images-container">
+        <a href="https://fbi.bio/internetwaring" target="_blank" style="background-image: url('https://cdn.discordapp.com/attachments/1255692212717752513/1332795200732397689/AAAAAAA.gif?ex=67a7b141&is=67a65fc1&hm=e978e484824f6ea720804e2595ce790d0bedf4d99281bda4523edd0019e0c384&');"></a>
+        <a href="https://phans.bio/NeverSlippin" target="_blank" style="background-image: url('https://cdn.discordapp.com/attachments/1255692212717752513/1332795200732397689/AAAAAAA.gif?ex=67a7b141&is=67a65fc1&hm=e978e484824f6ea720804e2595ce790d0bedf4d99281bda4523edd0019e0c384&');"></a>
+    </div>
+
+    <div class="audio-player">
+        <audio id="audio-player" loop autoplay>
+            <source src="https://files.catbox.moe/s0abnm.mp3" id="audio-source" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+<script>
+    // Add event listener to hide the welcome screen and start media playback
+    document.getElementById("welcome-screen").addEventListener("click", function () {
+        document.getElementById("welcome-screen").style.display = "none";
+        document.getElementById("audio-player").play();
+    });
+</script>
+
+</body>
+</html>
